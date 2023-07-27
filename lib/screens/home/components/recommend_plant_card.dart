@@ -5,7 +5,19 @@ import 'package:plant_app_ui/constants.dart';
 class RecommendPlantCard extends StatelessWidget {
   final Size size;
 
-  const RecommendPlantCard({super.key, required this.size});
+  final String image, title, country;
+  final int price;
+  final Function onPress;
+
+  const RecommendPlantCard(
+      {super.key,
+      required this.size,
+      required this.image,
+      required this.title,
+      required this.country,
+      required this.price,
+      required this.onPress});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +29,7 @@ class RecommendPlantCard extends StatelessWidget {
       width: size.width * 0.4,
       child: Column(
         children: [
-          Image.asset('assets/images/image_1.png'),
+          Image.asset('$image'),
           Container(
             padding: const EdgeInsets.all(kDefaultPadding / 2),
             decoration: BoxDecoration(
@@ -40,13 +52,13 @@ class RecommendPlantCard extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: 'Samantha\n'.toUpperCase(),
+                        text: '$title \n'.toUpperCase(),
                         style: const TextStyle(
                           color: Colors.black,
                         ),
                       ),
                       TextSpan(
-                        text: 'Russia'.toUpperCase(),
+                        text: country.toUpperCase(),
                         style: TextStyle(
                           color: kPrimaryColor.withOpacity(0.5),
                         ),
@@ -56,7 +68,7 @@ class RecommendPlantCard extends StatelessWidget {
                 ),
                 const Spacer(),
                 Text(
-                  '\$440',
+                  '\$$price',
                   style: Theme.of(context)
                       .textTheme
                       .labelLarge
@@ -70,3 +82,5 @@ class RecommendPlantCard extends StatelessWidget {
     );
   }
 }
+
+// assets/images/image_1.png
