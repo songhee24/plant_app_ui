@@ -8,11 +8,14 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          HeaderWithSearchBox(),
-          TitleWithCustomUnderline(title: 'Recommended'),
+          const HeaderWithSearchBox(),
+          TitleWithMoreButton(
+            function: () {},
+            text: 'More',
+          ),
         ],
       ),
     );
@@ -49,6 +52,39 @@ class TitleWithCustomUnderline extends StatelessWidget {
               color: kPrimaryColor.withOpacity(0.3),
             ),
           )
+        ],
+      ),
+    );
+  }
+}
+
+class TitleWithMoreButton extends StatelessWidget {
+  final VoidCallback function;
+  final String text;
+  const TitleWithMoreButton(
+      {super.key, required this.function, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      child: Row(
+        children: [
+          const TitleWithCustomUnderline(title: 'Recommended'),
+          const Spacer(),
+          ElevatedButton(
+            onPressed: function,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: kPrimaryColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+            ),
+            child: Text(
+              text,
+              style: const TextStyle(color: Colors.white),
+            ),
+          ),
         ],
       ),
     );
