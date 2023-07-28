@@ -4,11 +4,11 @@ import 'package:plant_app_ui/constants.dart';
 
 ///  Created by mac on 14/8/23.
 class HeaderWithSearchBox extends StatelessWidget {
-  const HeaderWithSearchBox({super.key});
+  final Size size;
+  const HeaderWithSearchBox({super.key, required this.size});
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.only(bottom: kDefaultPadding * 2.5),
       height: size.height * 0.2,
