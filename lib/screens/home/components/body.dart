@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plant_app_ui/constants.dart';
 
 ///  Created by mac on 14/8/23.
@@ -8,7 +9,7 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
-        Container(
+        SizedBox(
           height: size.height * 0.2,
           child: Stack(
             children: [
@@ -44,15 +45,22 @@ class Body extends StatelessWidget {
                       )
                     ],
                   ),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: "Search",
-                      hintStyle: TextStyle(
-                        color: kPrimaryColor.withOpacity(0.5),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Search",
+                            hintStyle: TextStyle(
+                              color: kPrimaryColor.withOpacity(0.5),
+                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
+                          ),
+                        ),
                       ),
-                      enabledBorder: InputBorder.none,
-                      focusedBorder: InputBorder.none,
-                    ),
+                      SvgPicture.asset('assets/icons/search.svg')
+                    ],
                   ),
                 ),
               ),
