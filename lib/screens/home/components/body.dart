@@ -27,6 +27,7 @@ class Body extends StatelessWidget {
                 left: 0,
                 right: 0,
                 child: Container(
+                  alignment: Alignment.center,
                   margin:
                       const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                   padding:
