@@ -74,12 +74,6 @@ class TitleWithMoreButton extends StatelessWidget {
           const Spacer(),
           ElevatedButton(
             onPressed: function,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: kPrimaryColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-            ),
             child: Text(
               text,
               style: const TextStyle(color: Colors.white),

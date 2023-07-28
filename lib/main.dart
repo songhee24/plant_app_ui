@@ -21,6 +21,17 @@ class MyApp extends StatelessWidget {
           color: kPrimaryColor, //<-- SEE HERE
         ),
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: kPrimaryColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 22),
+            minimumSize: Size.zero,
+          ),
+        ),
         useMaterial3: true,
       ),
       home: const HomeScreen(),
