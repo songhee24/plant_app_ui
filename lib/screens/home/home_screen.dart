@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:plant_app_ui/screens/home/components/body.dart';
 
 ///  Created by mac on 14/8/23.
 class HomeScreen extends StatelessWidget {
@@ -7,7 +8,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: buildAppBar());
+    return Scaffold(
+      appBar: buildAppBar(),
+      body: Body(),
+    );
   }
 
   AppBar buildAppBar() {
