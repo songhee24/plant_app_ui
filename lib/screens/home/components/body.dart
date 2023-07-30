@@ -22,23 +22,9 @@ class Body extends StatelessWidget {
           const SizedBox(height: 22),
           RecommendsPlantsList(size: size),
           TitleWithMoreButton(function: () {}, text: 'Featured Plants'),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                FeaturedPlantCard(
-                  size: size,
-                  onPress: () {},
-                  image: 'assets/images/bottom_img_1.png',
-                ),
-                FeaturedPlantCard(
-                  size: size,
-                  onPress: () {},
-                  image: 'assets/images/bottom_img_2.png',
-                ),
-              ],
-            ),
-          )
+          FeaturedPlantsList(
+            size: size,
+          ),
         ],
       ),
     );
