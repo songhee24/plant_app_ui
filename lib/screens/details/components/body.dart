@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app_ui/constants.dart';
 
 ///  Created by mac on 15/8/23.
 class Body extends StatelessWidget {
@@ -16,11 +17,18 @@ class Body extends StatelessWidget {
               height: size.height * 0.8,
               width: size.width * 0.75,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(63),
                   bottomLeft: Radius.circular(63),
                 ),
-                image: DecorationImage(
+                boxShadow: [
+                  BoxShadow(
+                    offset: const Offset(0, 10),
+                    blurRadius: 60,
+                    color: kPrimaryColor.withOpacity(0.60),
+                  ),
+                ],
+                image: const DecorationImage(
                   alignment: Alignment.centerLeft,
                   fit: BoxFit.cover,
                   image: AssetImage('assets/images/img.png'),
