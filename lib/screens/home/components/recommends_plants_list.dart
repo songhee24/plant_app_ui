@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app_ui/screens/details/details_screen.dart';
 import 'package:plant_app_ui/screens/home/components/recommend_plant_card.dart';
 
 ///  Created by mac on 15/8/23.
@@ -19,7 +20,8 @@ class RecommendsPlantsList extends StatelessWidget {
             country: 'Russia',
             price: 440,
             onPress: () {
-              print('print');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (ctx) => DetailsScreen()));
             },
           ),
           RecommendPlantCard(
@@ -29,7 +31,8 @@ class RecommendsPlantsList extends StatelessWidget {
             country: 'Russia',
             price: 440,
             onPress: () {
-              print('print');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (ctx) => DetailsScreen()));
             },
           ),
           RecommendPlantCard(
@@ -39,7 +42,8 @@ class RecommendsPlantsList extends StatelessWidget {
             country: 'Russia',
             price: 440,
             onPress: () {
-              print('print');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (ctx) => DetailsScreen()));
             },
           ),
         ],
