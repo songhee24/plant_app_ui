@@ -33,6 +33,30 @@ class Body extends StatelessWidget {
                         ),
                       ),
                       const Spacer(),
+                      Container(
+                        margin:
+                            EdgeInsets.symmetric(vertical: size.height * 0.03),
+                        padding: const EdgeInsets.all(kDefaultPadding / 2),
+                        height: 62,
+                        width: 62,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(6),
+                          boxShadow: [
+                            BoxShadow(
+                              offset: const Offset(0, 15),
+                              blurRadius: 22,
+                              color: kPrimaryColor.withOpacity(0.35),
+                            ),
+                            const BoxShadow(
+                              offset: Offset(-15, -15),
+                              blurRadius: 20,
+                              color: Colors.white,
+                            ),
+                          ],
+                        ),
+                        child: SvgPicture.asset('assets/icons/sun.svg'),
+                      )
                     ],
                   ),
                 ),
@@ -49,7 +73,7 @@ class Body extends StatelessWidget {
                     BoxShadow(
                       offset: const Offset(0, 10),
                       blurRadius: 60,
-                      color: kPrimaryColor.withOpacity(0.60),
+                      color: kPrimaryColor.withOpacity(0.30),
                     ),
                   ],
                   image: const DecorationImage(
