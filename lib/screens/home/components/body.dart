@@ -20,9 +20,9 @@ class Body extends StatelessWidget {
           RecommendPlantCard(
             size: size,
             image: 'assets/images/image_1.png',
-            title: '',
-            country: '',
-            price: 0,
+            title: 'Samantha',
+            country: 'Russia',
+            price: 440,
             onPress: () {
               print('print');
             },
