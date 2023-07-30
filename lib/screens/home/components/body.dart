@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app_ui/screens/home/components/header_with_search_box.dart';
-import 'package:plant_app_ui/screens/home/components/recommend_plant_card.dart';
+import 'package:plant_app_ui/screens/home/components/recommends_plants_list.dart';
 import 'package:plant_app_ui/screens/home/components/title_with_more_button.dart';
 
 ///  Created by mac on 14/8/23.
@@ -17,16 +17,8 @@ class Body extends StatelessWidget {
             size: size,
           ),
           TitleWithMoreButton(function: () {}, text: 'More'),
-          RecommendPlantCard(
-            size: size,
-            image: 'assets/images/image_1.png',
-            title: 'Samantha',
-            country: 'Russia',
-            price: 440,
-            onPress: () {
-              print('print');
-            },
-          ),
+          const SizedBox(height: 22),
+          RecommendsPlantsList(size: size),
         ],
       ),
     );
