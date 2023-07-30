@@ -5,7 +5,8 @@ import 'package:plant_app_ui/constants.dart';
 ///  Created by mac on 15/8/23.
 class IconCard extends StatelessWidget {
   final Size size;
-  const IconCard({super.key, required this.size});
+  final String icon;
+  const IconCard({super.key, required this.size, required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class IconCard extends StatelessWidget {
           ),
         ],
       ),
-      child: SvgPicture.asset('assets/icons/sun.svg'),
+      child: SvgPicture.asset(icon),
     );
   }
 }
