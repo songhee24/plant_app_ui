@@ -13,6 +13,11 @@ class HomeScreen extends StatelessWidget {
       appBar: buildAppBar(),
       body: const Body(),
       bottomNavigationBar: Container(
+        padding: const EdgeInsets.only(
+          left: kDefaultPadding * 2,
+          right: kDefaultPadding * 2,
+          bottom: kDefaultPadding,
+        ),
         height: 80,
         decoration: BoxDecoration(
           color: Colors.white,
