@@ -22,9 +22,8 @@ class Body extends StatelessWidget {
           const SizedBox(height: 22),
           RecommendsPlantsList(size: size),
           TitleWithMoreButton(function: () {}, text: 'Featured Plants'),
-          FeaturedPlantsList(
-            size: size,
-          ),
+          FeaturedPlantsList(size: size),
+          const SizedBox(height: 22),
         ],
       ),
     );
