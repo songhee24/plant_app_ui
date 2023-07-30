@@ -39,6 +39,13 @@ class Body extends StatelessWidget {
                     ],
                   ),
                 ),
+                const Spacer(),
+                Text(
+                  '\$440',
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                        color: kPrimaryColor,
+                      ),
+                ),
               ],
             ),
           )
