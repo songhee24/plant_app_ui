@@ -17,7 +17,16 @@ class Body extends StatelessWidget {
             size: size,
           ),
           TitleWithMoreButton(function: () {}, text: 'More'),
-          RecommendPlantCard(size: size),
+          RecommendPlantCard(
+            size: size,
+            image: 'assets/images/image_1.png',
+            title: '',
+            country: '',
+            price: 0,
+            onPress: () {
+              print('print');
+            },
+          ),
         ],
       ),
     );
