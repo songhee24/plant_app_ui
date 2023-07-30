@@ -15,13 +15,13 @@ class TitleWithMoreButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: Row(
         children: [
-          const TitleWithCustomUnderline(title: 'Recommended'),
+          TitleWithCustomUnderline(title: text),
           const Spacer(),
           ElevatedButton(
             onPressed: function,
-            child: Text(
-              text,
-              style: const TextStyle(color: Colors.white),
+            child: const Text(
+              'More',
+              style: TextStyle(color: Colors.white),
             ),
           ),
         ],

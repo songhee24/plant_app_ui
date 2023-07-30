@@ -16,9 +16,10 @@ class Body extends StatelessWidget {
           HeaderWithSearchBox(
             size: size,
           ),
-          TitleWithMoreButton(function: () {}, text: 'More'),
+          TitleWithMoreButton(function: () {}, text: 'Recommended'),
           const SizedBox(height: 22),
           RecommendsPlantsList(size: size),
+          TitleWithMoreButton(function: () {}, text: 'Featured Plants'),
         ],
       ),
     );
