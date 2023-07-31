@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app_ui/constants.dart';
 import 'package:plant_app_ui/screens/details/components/image_with_icons.dart';
 import 'package:plant_app_ui/screens/details/components/title_with_price.dart';
 
@@ -16,6 +17,7 @@ class Body extends StatelessWidget {
             country: 'Russia',
             price: 440,
           ),
+          const SizedBox(height: kDefaultPadding),
           Row(
             children: [
               SizedBox(
@@ -30,7 +32,25 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {},
-                  child: Text('Buy Now'),
+                  child: const Text(
+                    'Buy Now',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Description',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
               )
             ],
