@@ -16,6 +16,25 @@ class Body extends StatelessWidget {
             country: 'Russia',
             price: 440,
           ),
+          Row(
+            children: [
+              SizedBox(
+                width: size.width / 2,
+                height: 84,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                      ),
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: Text('Buy Now'),
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
