@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plant_app_ui/constants.dart';
 import 'package:plant_app_ui/screens/details/components/image_with_icons.dart';
+import 'package:plant_app_ui/screens/details/components/title_with_price.dart';
 
 ///  Created by mac on 15/8/23.
 class Body extends StatelessWidget {
@@ -11,44 +11,11 @@ class Body extends StatelessWidget {
       child: Column(
         children: [
           ImageWithIcons(size: size),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-            child: Row(
-              children: [
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'Angelica\n',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium
-                            ?.copyWith(
-                              color: kTextColor,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                      const TextSpan(
-                        text: 'Russia',
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: kPrimaryColor,
-                          fontWeight: FontWeight.w300,
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                const Spacer(),
-                Text(
-                  '\$440',
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        color: kPrimaryColor,
-                      ),
-                ),
-              ],
-            ),
-          )
+          const TitleWithPrice(
+            title: 'Angelica',
+            country: 'Russia',
+            price: 440,
+          ),
         ],
       ),
     );
